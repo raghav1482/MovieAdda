@@ -1,3 +1,6 @@
+This React App basically contains information about Movies. One may check details of any movie he/she wants.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
