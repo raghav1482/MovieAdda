@@ -3,18 +3,26 @@ import axios from 'axios';
 import { useEffect,useState } from 'react';
 import "./poster.css";
 export default function Poster(){
-    const [mydat,setMyDat]=useState([])
+    const [newdat , setDat] = useState({});
+    const [im , setIm] = useState("");
     useEffect(()=>{
         axios.get("https://api.tvmaze.com/shows")
-        .then((res)=>setMyDat(res.data));
-      },[]);
+        .then((res)=>{setDat(res.data[Math.floor(Math.random()*res.data.length)])});
+      },{});
+
+      async function dt(){
+      var dat = await newdat.image.original;
+      setIm(dat);
+      }
+      dt();
+
     return(<>
 	<div className="post">
         <div className="post1">
-		<h1>True Detective</h1>
-        <a href="http://www.hbo.com/true-detective"><button>WATCH NOW</button></a>
+		<h1>{newdat.name}</h1>
+        <a href={newdat.url}><button>DETAILS</button></a>
         </div>
-        <img src="https://static.tvmaze.com/uploads/images/original_untouched/445/1114021.jpg"></img>
+        <img src={im}></img>
 	</div>
     </>);
 }

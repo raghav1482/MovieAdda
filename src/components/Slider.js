@@ -19,6 +19,15 @@ export default function Slider(props){
         .then((res)=>setMyDat(res.data));
       },[]);
       var i=1;
+      function shuffleArray(array) {
+        for (var i = array.length - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1));
+            var temp = array[i];
+            array[i] = array[j];
+            array[j] = temp;
+        }
+    }
+    shuffleArray(mydat);
     return(
 <>
       <div className="slider">
@@ -27,7 +36,7 @@ export default function Slider(props){
 
             {mydat.map(dat=>{
                 const{score , show}=dat;
-                if(dat.genres[0]==props.type || dat.genres[1]==props.type || dat.genres[2]==props.type){
+                if(dat.genres[0]===props.type || dat.genres[1]===props.type || dat.genres[2]===props.type){
                 return <Item title={dat.name} key={dat.id} imag={dat.image.medium} eve={i++} keys={dat.id} detail={dat.summary}/>
                 }
             })}
