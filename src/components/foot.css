@@ -5,7 +5,8 @@
   font-size:15px;
   line-height:24px;
   color:#868686;
-  margin-top: 100px;
+  position: relative;
+  bottom:-20%;
 }
 
 div{

@@ -6,6 +6,8 @@ body{
 }
 .App {
   text-align: center;
+  overflow-x: hidden;
+  height: 100vh;
 }
 
 .App-logo {
@@ -39,6 +41,21 @@ body{
 .about p{
  color: aliceblue;
  width: 600px;
+}
+.container1{
+  margin-top: 10% !important;
+}
+.container1 form{
+  display: flex;
+  flex-direction: column;
+}
+.container1 label{
+  display: inline-block ;
+}
+.container1 input {
+  display: inline-block;
+  width: 40%;
+  margin:auto;
 }
 
 
