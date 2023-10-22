@@ -4,7 +4,7 @@ export default function Navb(){
     return(
         <>
 <Navbar collapseOnSelect expand="lg" style={{background: "rgb(222,0,0)",
-background: "linear-gradient(90deg, rgba(222,0,0,0.3534663865546218) 10%, rgba(0,0,0,1) 100%)",position:"sticky",top:"0px",zIndex:"2"}} variant="dark">
+background: "linear-gradient(90deg, rgba(222,0,0,0.3534663865546218) 50%, rgba(0,0,0,1) 100%)",position:"sticky",top:"0px",zIndex:"2",fontFamily:"'Sora', sans-serif"}} variant="dark">
       <Container>
         <Navbar.Brand href="/"><span style={{color:"white"}}><b>MovieADDA</b></span></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />

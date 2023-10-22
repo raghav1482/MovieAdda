@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
 .maindiv{
     /* position:absolute; */
     width:800px;
@@ -10,7 +10,7 @@
     color:white;
     padding:20px;
     border-radius:20px;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Sora', sans-serif;
   }
   
   .maindiv img{

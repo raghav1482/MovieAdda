@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora&display=swap');
 
 body{
 	box-shadow: inset 800px 0px 100px rgba(0, 0, 0, 0.697);
@@ -24,7 +24,7 @@ button{
 .post1 h1{
 	font-size: 70px;
 	color:aliceblue;
-	font-family: 'Playfair Display', serif;
+	font-family: 'Sora', sans-serif;
 	margin-bottom: 40px;
 }
 

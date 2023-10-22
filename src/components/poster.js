@@ -20,7 +20,7 @@ export default function Poster(){
 	<div className="post">
         <div className="post1">
 		<h1>{newdat.name}</h1>
-        <a href={newdat.url}><button>DETAILS</button></a>
+        <a href={newdat.url}><button className="button-62">DETAILS</button></a>
         </div>
         <img src={im}></img>
 	</div>

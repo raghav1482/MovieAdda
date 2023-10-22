@@ -1,6 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
 .slider{
-    font-family: sans-serif !important;
+  font-family: 'Sora', sans-serif;
     display: flex;
     flex-direction: column;
     /* align-items: center; */
@@ -12,7 +11,7 @@
   }
   .slider h1{
     margin-left: 100px;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Sora', sans-serif;
     color: rgb(255, 0, 0);
     background-color: aliceblue;
     width: max-content;

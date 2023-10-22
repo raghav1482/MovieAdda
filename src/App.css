@@ -1,8 +1,10 @@
+
 body{
   background:url("./components/images/back.jpg");
   background-size: cover;
   background-attachment: fixed;
   backdrop-filter: blur(2px);
+  font-family: 'Sora', sans-serif;
 }
 .App {
   text-align: center;
