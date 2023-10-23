@@ -1,14 +1,17 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import "./moviedesc.css";
-export default function Moviedesc(props){
+export default function Moviedesc(){
+const location = useLocation();
+const [data , setData] = useState(location.state);
+console.log(data);
 return(<>
 <div className="maindiv">
-  <img src={props.imag}/>
+  <img src={data.image}/>
   <div>
-    <h2>{props.title}</h2>
-  <p><span dangerouslySetInnerHTML={{ __html: props.detail }} ></span></p>
-  <a href={props.page}>More</a>
+    <h2>{data.title}</h2>
+  <p><span dangerouslySetInnerHTML={{ __html: data.detail }} ></span></p>
+  <a href={data.page}>More</a>
  </div>
 </div>
 </>);

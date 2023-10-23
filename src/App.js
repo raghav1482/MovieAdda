@@ -12,6 +12,7 @@ import {
 } from "react-router-dom";
 import Moviedesc from './components/Moviedesc';
 import Home from './components/Home';
+import Result from './components/Result';
 // import { useEffect, useState } from 'react';
 // import axios from 'axios';
 
@@ -29,11 +30,10 @@ function App() {
       <Navb />
         <Routes>
           <Route exact path={`/`} element={<Home />}></Route>
-          {mydat.map(dat => {
-            return <Route exact path={`/Moviedesc${dat.id}`} element={<Moviedesc title={dat.name} page={dat.url} keys={dat.id} imag={dat.image.original} detail={dat.summary} num={i - 1} />}></Route>
-          })};
+          <Route path={`/Moviedesc`} element={<Moviedesc />}></Route>
           <Route path={`/about`} element={<About />}></Route>
           <Route path={`/contact`} element={<Contact />}></Route>
+          <Route path={`/result`} element={<Result/>}></Route>
         </Routes>
       <Foot />
       </Router>

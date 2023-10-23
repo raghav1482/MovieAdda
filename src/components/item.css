@@ -24,7 +24,7 @@
   position: relative;
 }
 .card img{
-  width: 100%;
+  width: 300px;
   height:100%;
   transition: all .3s cubic-bezier(.8,.5,.2,1.4);
 }
@@ -78,6 +78,8 @@
   margin-left: 0 !important;
   overflow-wrap: break-word !important;
   max-width: 100% !important;
+  background-color: white;
+  color: #ff3838;
 }
 .button-62 {
   background: linear-gradient(to bottom right, #EF4765, #FF9A5A);

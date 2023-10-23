@@ -37,7 +37,7 @@ export default function Slider(props){
             {mydat.map(dat=>{
                 const{score , show}=dat;
                 if(dat.genres[0]===props.type || dat.genres[1]===props.type || dat.genres[2]===props.type){
-                return <Item title={dat.name} key={dat.id} imag={dat.image.medium} eve={i++} keys={dat.id} detail={dat.summary}/>
+                return <Item title={dat.name} key={dat.id} imag={dat.image.medium} page = {dat.url} eve={i++} keys={dat.id} detail={dat.summary}/>
                 }
             })}
         </Carousel>

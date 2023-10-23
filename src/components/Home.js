@@ -1,18 +1,31 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Slider from './Slider';
 import Poster from './poster';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import { useNavigate } from 'react-router-dom';
 export default function Home(){
-    useEffect(() => {
-        AOS.init();
-      }, []);
+    var srch = '';
+    const navigate = useNavigate();
+    async function getdat(url){
+        const response = await fetch(url);
+        const data = await response.json(); 
+        navigate('/result' , {state : {results : data }});
+        console.log(data);
+    }
+    function handleSubmit(e){
+        e.preventDefault();
+        const url= `https://api.tvmaze.com/search/shows?q=${srch}`;
+        getdat(url);
+        console.log(srch);
+    }
     return(<>
         <Poster/>
-        
-        <div data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500" data-aos-duration="500"><Slider type="Science-Fiction"/></div>
-        <div data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500" data-aos-duration="500"><Slider type="Drama"/></div>
-        <div data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500" data-aos-duration="500"><Slider type="Thriller"/></div>
-        <div data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500" data-aos-duration="500"><Slider type="Horror"/></div>
+        <form onSubmit={handleSubmit} className='search'>
+            <input type='text' onChange={(e)=>{srch = e.target.value}} placeholder='Search..'/>
+            <button type='submit' className='srch'><i class="fa fa-search"></i></button>
+        </form>
+        <Slider type="Science-Fiction"/>
+        <Slider type="Drama"/>
+        <Slider type="Thriller"/>
+        <Slider type="Horror"/>
     </>);
 }
