@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import {useLocation} from 'react-router-dom';
-import Item from './Item';
+import Item from './item/Item';
 
 function Result() {
     const location = useLocation();

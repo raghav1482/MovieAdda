@@ -2,7 +2,6 @@ import React from "react";
 import axios from 'axios';
 import { useEffect,useState } from 'react';
 import "./poster.css";
-import { useNavigate } from "react-router-dom";
 export default function Poster(){
     const [newdat , setDat] = useState({});
     const [tot , setTot] = useState([]);

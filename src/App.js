@@ -2,7 +2,7 @@ import './App.css';
 import Navb from './components/Navbar';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import Foot from './components/foot';
+import Foot from './components/footer/foot';
 import About from './components/about';
 import Contact from './components/contact';
 import {
@@ -10,7 +10,7 @@ import {
   Routes,
   Route
 } from "react-router-dom";
-import Moviedesc from './components/Moviedesc';
+import Moviedesc from './components/moviedesc/Moviedesc';
 import Home from './components/Home';
 import Result from './components/Result';
 // import { useEffect, useState } from 'react';

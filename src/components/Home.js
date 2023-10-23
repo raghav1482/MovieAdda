@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import Slider from './Slider';
-import Poster from './poster';
+import Slider from './slider/Slider';
+import Poster from './poster/poster';
 import { useNavigate } from 'react-router-dom';
 export default function Home(){
     var srch = '';
